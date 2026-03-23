@@ -1,7 +1,7 @@
 site_name: Luwow Documentation
-site_url: 
-repo_name: Luwow-Project/Documentation
-repo_url: https://github.com/Luwow-Project/Documentation
+site_url: https://luwow-project.github.io/Documentation/
+repo_name: Luwow-Project
+repo_url: https://github.com/Luwow-Project/
 
 theme:
   custom_dir: docs/overrides
@@ -62,5 +62,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Tutorials:
+    - Tutorials: tutorials/index.md
 copyright: |
   &copy; 2026 <a href="https://github.com/Luwow-Project"  target="_blank" rel="noopener">Luwow Project</a>
