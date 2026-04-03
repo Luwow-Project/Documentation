@@ -9,7 +9,7 @@ The `Engine` object that is used to run a Luwow application.
 
 <!------------------------- MAIN -------------------------!-->
 
-# initialize
+## initialize
 
 ```cpp
 void initialize()
@@ -17,7 +17,7 @@ void initialize()
 
 Initializes a new Luau state, sets the environment variables, and sandboxes the state.
 
-## Returns
+### Returns
 <span markdown>
     <div class="md-typeset__table">
         <table>
@@ -32,7 +32,7 @@ Initializes a new Luau state, sets the environment variables, and sandboxes the 
 
 -----
 
-# require
+## require
 
 ```cpp
 int require(lua_State* L, const std::string& moduleName);
@@ -44,7 +44,7 @@ If the module is a Luau module, its result after execution will be saved to the 
 
 If the module is an internal module, its exported functions will be returned in a table to the Luau thread it was called from.
 
-## Parameters
+### Parameters
 
 <span markdown>
     <div class="md-typeset__table">
@@ -63,7 +63,7 @@ If the module is an internal module, its exported functions will be returned in 
     </div>
 </span>
 
-## Returns
+### Returns
 <span markdown>
     <div class="md-typeset__table">
         <table>
