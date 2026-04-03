@@ -28,7 +28,7 @@ Initializes a new Luau state, sets the environment variables, and sandboxes the 
             </tbody>
         </table>
     </div>
-</div>
+</span>
 
 -----
 
@@ -46,6 +46,22 @@ If the module is an internal module, its exported functions will be returned in 
 
 ## Parameters
 
+<span markdown>
+    <div class="md-typeset__table">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="api-param-highlight">L: <a href="">lua_State*</a></td>
+                    <td>The Luau thread that the function is being called with.</td>
+                </tr>
+                <tr>
+                    <td class="api-param-highlight">moduleName: <a href="">const std::string&</a></td>
+                    <td>The name of the module that will be required.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</span>
 
 ## Returns
 <span markdown>
@@ -58,7 +74,8 @@ If the module is an internal module, its exported functions will be returned in 
             </tbody>
         </table>
     </div>
-</div>
+</span>
 
 -----
+
 
