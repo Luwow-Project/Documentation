@@ -2,7 +2,7 @@
 
 Like it has been mentioned in the previous page, Luwow gives total control to the user on how they wish to use its components. This is why you have to select which components you wish to use, and create a project yourself using those components. 
 
-If you don't know how to setup a Luwow project on your own however, there's already a pre-made release repository that you can clone to your computer to get started. This tutorial page will go over the process of setting up this pre-made repository in detail.
+If you don't know how to setup a Luwow project on your own however, there's already a [pre-made release repository](https://github.com/Luwow-Project/Release) that you can clone to your computer to get started. This tutorial page will go over the process of setting up this pre-made repository in detail.
 
 ## Requirements
 
