@@ -64,6 +64,7 @@ nav:
   - Home: index.md
   - Tutorials:
     - Tutorials: tutorials/index.md
+    - Luwow Project Setup: tutorials/setup.md
   - API Reference:
     - API Reference: api-reference/index.md
     - Engine: 
