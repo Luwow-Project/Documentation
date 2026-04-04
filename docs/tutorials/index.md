@@ -1,6 +1,6 @@
 # Getting Started
 
-Welcome to the Luwow tutorial section! This section describes what Luwow is, and how to build a Luwow project and run its executables.
+Welcome to the Luwow tutorial section! This section describes what Luwow is, how to build a Luwow project, and how to run the produced executables.
 
 ## What is Luwow?
 
