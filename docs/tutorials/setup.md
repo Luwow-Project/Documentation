@@ -48,11 +48,8 @@ cmake --build build --config Release
 
 If using MinGW on Windows:
 ```bash
-mkdir build
-cd build
-
-cmake . -G "MinGW Makefiles"
-cmake --build . --config Release
+cmake . -B build -G "MinGW Makefiles"
+cmake --build build --config Release
 ```
 
 MacOS:
