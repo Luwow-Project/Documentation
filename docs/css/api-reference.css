@@ -1,3 +1,11 @@
+table, tbody, tr, td {
+    width: 100%;
+}
+
+tbody {
+    display: inline-table;
+}
+
 .md-typeset .emojione, .md-typeset .gemoji, .md-typeset .twemoji {
     --md-icon-size: 1.2em;
 }
@@ -26,9 +34,27 @@
     padding-left: 8px;
 }
 
-.api-param-highlight {
-    background-color: var(--td-color);
-    color: var(--default-text-color);
+.api-param-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.api-param-title {
+    text-decoration: none;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 140%;
+    font-weight: 400;
+}
+
+.api-param-description { 
+    font-size: 16px; 
+    margin-top: 4px; 
+    margin-bottom: 0px;
+    width: 100%;
 }
 
 .api-return-box {

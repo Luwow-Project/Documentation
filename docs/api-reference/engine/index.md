@@ -51,12 +51,24 @@ If the module is an internal module, its exported functions will be returned in 
         <table>
             <tbody>
                 <tr>
-                    <td class="api-param-highlight">L: <a href="">lua_State*</a></td>
-                    <td>The Luau thread that the function is being called with.</td>
-                </tr>
-                <tr>
-                    <td class="api-param-highlight">moduleName: <a href="">const std::string&</a></td>
-                    <td>The name of the module that will be required.</td>
+                    <td>
+                        <div class="api-param-header">
+                            <span class="api-param-title">L</span>
+                            <span>:</span>
+                            <span class="api-param-title"><a href=""><span>lua_State*</span></a></span>
+                            </span>
+                        </div>
+                        <p class="api-param-description">The Luau thread that the function is being called with.</p>
+                    </td>
+                    <td>
+                        <div class="api-param-header">
+                            <span class="api-param-title">moduleName</span>
+                            <span>:</span>
+                            <span class="api-param-title"><a href=""><span>const std::string&</span></a></span>
+                            </span>
+                        </div>
+                        <p class="api-param-description">The name of the module that will be required.</p>
+                    </td>
                 </tr>
             </tbody>
         </table>
