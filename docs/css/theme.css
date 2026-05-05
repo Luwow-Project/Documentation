@@ -89,7 +89,7 @@
 .md-typeset__table table:not([class]) {
     width: 100%;
     border-radius: 0.5em;
-    border: .05rem solid var(--table-border-color);
+    border: .1rem solid var(--table-border-color);
     background-color: var(--md-typeset-table-color);
     border-collapse: collapse;
 }

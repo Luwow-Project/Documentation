@@ -45,7 +45,6 @@ If the path string points to a Luau module, its result after execution will be s
 If the path string points to a native module, its exported functions will be returned in a table to the Luau thread it was called from.
 
 ### Parameters
-
 <span markdown>
     <div class="md-typeset__table">
         <table>
@@ -103,10 +102,10 @@ If the path string points to a native module, its exported functions will be ret
 
 -----
 
-## executeModule
+## loadModuleFromBytecode
 
 ```cpp
-int executeModule(lua_State* L, const std::string& moduleName, const std::string& bytecode);
+int loadModuleFromBytecode(lua_State* L, const std::string& moduleName, const std::string& bytecode, bool saveRef, bool useGivenState)
 ```
 
 Executes a module with its bytecode in a new sandboxed Luau thread. If the engine has a debugger callback function, it will be called with the new thread state from this function.
@@ -117,16 +116,59 @@ Executes a module with its bytecode in a new sandboxed Luau thread. If the engin
         <table>
             <tbody>
                 <tr>
-                    <td class="api-param-highlight">L: <a href="">lua_State*</a></td>
-                    <td>The Luau thread that the function is being called with.</td>
+                    <td>
+                        <div class="api-param-header">
+                            <span class="api-param-title">L</span>
+                            <span>:</span>
+                            <span class="api-param-title"><a href=""><span>lua_State\*</span></a></span>
+                            </span>
+                        </div>
+                        <p class="api-param-description">The Luau thread that the function is being called with.</p>
+                    </td>
                 </tr>
-                <tr>
-                    <td class="api-param-highlight">moduleName: <a href="">const std::string&</a></td>
-                    <td>The name of the Luau module that will be ran.</td>
+                <tr class="api-param-tr-after-first">
+                    <td>
+                        <div class="api-param-header">
+                            <span class="api-param-title">moduleName</span>
+                            <span>:</span>
+                            <span class="api-param-title"><a href=""><span>const std::string&</span></a></span>
+                            </span>
+                        </div>
+                        <p class="api-param-description">The module name that represents the Luau module.</p>
+                    </td>
                 </tr>
-                <tr>
-                    <td class="api-param-highlight">bytecode: <a href="">const std::string&</a></td>
-                    <td>The bytecode of the Luau module.</td>
+                <tr class="api-param-tr-after-first">
+                    <td>
+                        <div class="api-param-header">
+                            <span class="api-param-title">bytecode</span>
+                            <span>:</span>
+                            <span class="api-param-title"><a href=""><span>const std::string&</span></a></span>
+                            </span>
+                        </div>
+                        <p class="api-param-description">The bytecode of the Luau module that will be executed.</p>
+                    </td>
+                </tr>
+                <tr class="api-param-tr-after-first">
+                    <td>
+                        <div class="api-param-header">
+                            <span class="api-param-title">saveRef</span>
+                            <span>:</span>
+                            <span class="api-param-title"><a href=""><span>bool</span></a></span>
+                            </span>
+                        </div>
+                        <p class="api-param-description">Whether or not the engine will save the result to the cache.</p>
+                    </td>
+                </tr>
+                <tr class="api-param-tr-after-first">
+                    <td>
+                        <div class="api-param-header">
+                            <span class="api-param-title">useGivenState</span>
+                            <span>:</span>
+                            <span class="api-param-title"><a href=""><span>bool</span></a></span>
+                            </span>
+                        </div>
+                        <p class="api-param-description">Whether or not the engine will use the given <a>lua_State\*</a> to create the new thread.</p>
+                    </td>
                 </tr>
             </tbody>
         </table>
