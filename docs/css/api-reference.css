@@ -6,6 +6,10 @@ tbody {
     display: inline-table;
 }
 
+td {
+    width: fit-content;
+}
+
 .md-typeset .emojione, .md-typeset .gemoji, .md-typeset .twemoji {
     --md-icon-size: 1.2em;
 }

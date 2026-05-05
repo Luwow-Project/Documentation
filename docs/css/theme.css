@@ -96,11 +96,6 @@
     padding: 0 0.5rem;
 }
 
-td {
-    border: none;
-    width: fit-content;
-}
-
 .md-typeset :is(.admonition, details) > :is(.admonition-title, summary) {
 	background-color: var(--md-admonition-bg-color);
     border-radius: 0.4rem;
