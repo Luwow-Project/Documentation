@@ -6,10 +6,6 @@ tbody {
     display: inline-table;
 }
 
-.md-typeset__table table:not([class]) {
-    border: .05rem solid var(--default-text-color-open);
-}
-
 .md-typeset .emojione, .md-typeset .gemoji, .md-typeset .twemoji {
     --md-icon-size: 1.2em;
 }

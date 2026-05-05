@@ -86,7 +86,7 @@
     font-size: .80rem;
     width: 100%;
     border-radius: 0.5em;
-    border: none;
+    border: .05rem solid var(--default-text-color-open);
     background-color: var(--md-typeset-table-color);
 }
 
