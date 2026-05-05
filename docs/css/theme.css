@@ -83,7 +83,6 @@
 }
 
 .md-typeset__table table:not([class]) {
-    font-size: .80rem;
     width: 100%;
     border-radius: 0.5em;
     border: .05rem solid var(--default-text-color-open);

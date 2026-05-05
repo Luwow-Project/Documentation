@@ -58,7 +58,8 @@ tbody {
 }
 
 .api-return-box {
-    width: 1000px;
+    width: 100%;
+    font-size: 0.80rem;
 }
 
 .api-returns-title {
