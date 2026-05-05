@@ -60,6 +60,8 @@ If the module is an internal module, its exported functions will be returned in 
                         </div>
                         <p class="api-param-description">The Luau thread that the function is being called with.</p>
                     </td>
+                </tr>
+                <tr>
                     <td>
                         <div class="api-param-header">
                             <span class="api-param-title">moduleName</span>
