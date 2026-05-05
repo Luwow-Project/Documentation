@@ -2,6 +2,9 @@
     --default-text-color: #ffffffdf;
     --default-text-color-open: #534ab7;
 
+    --table-border-color-white: #afadcf;
+    --table-border-color-dark: #2c2952;
+
     --title-text-color-white: #fff;
     --title-text-color-dark: #36303f;
 
@@ -32,7 +35,7 @@
 
     --typeset-a-color: #6956c8;
 
-    --table-background-color-white: #d2d2dd;
+    --table-background-color-white: #e4e4ff;
     --table-background-color-dark: #181824;
 
     --td-color-dark: #2a244d;

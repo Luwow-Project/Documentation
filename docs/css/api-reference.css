@@ -38,8 +38,12 @@ td {
     padding-left: 8px;
 }
 
+.api-param-tr-first {
+    border-top: none;
+}
+
 .api-param-tr-after-first {
-    border-top: 2px solid var(--default-text-color-open);
+    border-top: 2px solid var(--table-border-color);
 }
 
 .api-param-header {
@@ -68,6 +72,7 @@ td {
 .api-return-box {
     width: 100%;
     font-size: 0.80rem;
+    border-top: none;
 }
 
 .api-returns-title {

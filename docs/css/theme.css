@@ -2,6 +2,8 @@
     --default-text-color: var(--text-color-white);
     --title-text-color: var(--title-text-color-white);
 
+    --table-border-color: var(--table-border-color-dark);
+
     --button-background-color: var(--button-bg-color-white);
     --button-text-color: var(--button-text-color-dark);
 
@@ -37,6 +39,8 @@
 [data-md-color-scheme="luwowdoc-light"] {
     --default-text-color: var(--text-color-dark);
     --title-text-color: var(--title-text-color-dark);
+
+    --table-border-color: var(--table-border-color-white);
 
     --button-background-color: var(--button-bg-color-dark);
     --button-text-color: var(--button-text-color-white);
@@ -85,7 +89,7 @@
 .md-typeset__table table:not([class]) {
     width: 100%;
     border-radius: 0.5em;
-    border: .05rem solid var(--default-text-color-open);
+    border: .05rem solid var(--table-border-color);
     background-color: var(--md-typeset-table-color);
     border-collapse: collapse;
 }
