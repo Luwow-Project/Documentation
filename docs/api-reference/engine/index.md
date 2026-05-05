@@ -49,7 +49,7 @@ If the path string points to a native module, its exported functions will be ret
     <div class="md-typeset__table">
         <table>
             <tbody>
-                <tr>
+                <tr class="api-param-tr-first">
                     <td>
                         <div class="api-param-header">
                             <span class="api-param-title">engine</span>
@@ -115,7 +115,7 @@ Executes a module with its bytecode in a new sandboxed Luau thread. If the engin
     <div class="md-typeset__table">
         <table>
             <tbody>
-                <tr>
+                <tr class="api-param-tr-first">
                     <td>
                         <div class="api-param-header">
                             <span class="api-param-title">L</span>
