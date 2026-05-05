@@ -38,6 +38,10 @@ td {
     padding-left: 8px;
 }
 
+.api-param-tr-after-first {
+    border-top: 2px solid var(--default-text-color-open);
+}
+
 .api-param-header {
     width: 100%;
     display: flex;

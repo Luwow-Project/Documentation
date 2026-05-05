@@ -87,6 +87,7 @@
     border-radius: 0.5em;
     border: .05rem solid var(--default-text-color-open);
     background-color: var(--md-typeset-table-color);
+    border-collapse: collapse;
 }
 
 .md-typeset__table {
