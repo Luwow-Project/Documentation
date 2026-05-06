@@ -96,9 +96,9 @@
 
 .md-typeset__table {
     width: 100%;
-    padding-left: 0.5em;
+    padding: 0 0 0 0.5em;
     margin-bottom: 0em;
-    padding: 0 0.5rem;
+    display: block;
 }
 
 .md-typeset :is(.admonition, details) > :is(.admonition-title, summary) {
@@ -139,4 +139,8 @@ html .md-footer-meta.md-typeset a {
 
 .md-path__item:not(:first-child):before {
     background-color: var(--md-default-fg-color);
+}
+
+.md-typeset h3:not(.api-summary-list-h3, .api-summary-section-h3) {
+    margin: 1em 0 .8em;
 }

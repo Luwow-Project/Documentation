@@ -1,5 +1,5 @@
 [data-md-color-scheme="luwowdoc-dark"] {
-    --md-code-fg-color: var(--code-fg-color-dark);
+    --md-code-fg-color: var(--code-fg-color-white);
     --md-code-bg-color: var(--code-bg-color-dark);
 
     --md-code-hl-color: #4287ff;
@@ -19,7 +19,7 @@
 }
 
 [data-md-color-scheme="luwowdoc-light"] {
-    --md-code-fg-color: var(--code-fg-color-white);
+    --md-code-fg-color: var(--code-fg-color-dark);
     --md-code-bg-color: var(--code-bg-color-white);
 
     --md-code-hl-color: #4287ff;
