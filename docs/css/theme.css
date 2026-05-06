@@ -140,7 +140,3 @@ html .md-footer-meta.md-typeset a {
 .md-path__item:not(:first-child):before {
     background-color: var(--md-default-fg-color);
 }
-
-.md-typeset h3:not(.api-summary-list-h3, .api-summary-section-h3) {
-    margin: 1em 0 .8em;
-}
