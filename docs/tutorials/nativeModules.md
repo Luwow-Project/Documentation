@@ -2,7 +2,7 @@
 
 In Luwow, to create functionality that extends the capabilities of the engine, you can use native modules. Native modules are statically registered binary modules that can be required and used from Luau.
 
-For example, by using the [GUI](https://github.com/Luwow-Project/GUI) library, you can export GUI functionality to Luau, which allows the user to create native OS components to render.
+For example, by using the [GUI](https://github.com/Luwow-Project/GUI) library, you can export GUI functionality to Luau, which allows the user to create native OS components to render:
 
 ```luau
 local Gui = require("@Luwow/gui")
@@ -16,8 +16,6 @@ local Window = Gui.createWindow({
 
 Window.show()
 ```
-
-The above example Luau code allows the user to create a window with a certain title, width and height.
 
 ## Creating a new Native Module
 
@@ -251,9 +249,9 @@ set_target_properties(Luwow.RunScriptWithPrinter PROPERTIES OUTPUT_NAME runscrip
 target_sources(Luwow.RunScriptWithPrinter PRIVATE main.cpp)
 ```
 
-What these files allow us to do is to create the main executable binary that we'll use to run our Luau code with. To make this process more modular, we expect definitions from a main `CMakeLists.txt` that provides us with the location of the root folders. This is the reason why you need to create a main `CMakeLists.txt` file.
+As you might have noticed, we use root definitions to locate our module's root folder. This definition is made inside a main `CMakeLists.txt` file, apart from the ones we have defined. This is done to make the structure more modular, and gives the user control over where the folder may be defined in the filesystem.
 
-You can update your main `CMakeLists.txt` file with the definitions below:
+In our case, we expect a `PRINTER_ROOT` to be defined inside of this main `CMakeLists.txt` file. You can add this definition to your main file, using the snippet below:
 
 ```
 set(PRINTER_ROOT ${LIBRARY_ROOT}/printer)
@@ -261,7 +259,7 @@ add_subdirectory(${PRINTER_ROOT}/src/Printer)
 add_subdirectory(${PRINTER_ROOT}/src/PrinterRunner)
 ```
 
-After this, our new folder structure should look like this:
+Finally after everything above, our new folder structure should look like this:
 
 ```
 printer/
@@ -277,9 +275,11 @@ printer/
 
 ### Building and Running
 
-After creating and updating your cmake files, you can start the building process to create the `runscriptwithprinter` executable binary.
+After completing the above steps, we can now start the building process to create the `runscriptwithprinter` executable binary.
 
-When the process is complete, you can use the `runscriptwithprinter` binary with a script path argument. To test our new module, we can create a script such as this:
+If you've been using the [release repository](https://github.com/Luwow-Project/Release), you can use the build commands from [this page](https://luwow-project.github.io/Documentation/tutorials/setup/#setting-up) to build your project. Make sure the root definitions in the main `CMakeLists.txt` file are correct.
+
+When the building process is complete, we'll have a new binary, called `runscriptwithprinter`. We can run this binary with a path to our script to run it. Let's create an example script like so below:
 
 ```luau
 local Printer = require("@Luwow/Printer")

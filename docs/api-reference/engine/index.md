@@ -208,7 +208,7 @@ Registers a new native module to the engine. The module can then be required fro
                         <div class="api-param-header">
                             <span class="api-param-title">module</span>
                             <span>:</span>
-                            <span class="api-param-title"><a href=""><span>std::shared_ptr&lt;ILuauModule&lt;</span></a></span>
+                            <span class="api-param-title"><a href=""><span>std::shared_ptr&lt;ILuauModule&gt;</span></a></span>
                             </span>
                         </div>
                         <p class="api-param-description">The pointer to the <code>ILuauModule</code> that will be registered.</p>
