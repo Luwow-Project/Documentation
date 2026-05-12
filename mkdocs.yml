@@ -66,6 +66,7 @@ nav:
     - Tutorials: tutorials/index.md
     - Luwow Project Setup: tutorials/setup.md
     - Require Resolution: tutorials/require.md
+    - Native Modules: tutorials/nativeModules.md
   - API Reference:
     - API Reference: api-reference/index.md
     - Engine: 
