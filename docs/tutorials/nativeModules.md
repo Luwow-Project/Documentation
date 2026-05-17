@@ -300,6 +300,8 @@ This should print `Hello from Luwow!` to the output.
 
 ## Conclusion
 
+The source code of this library and the folder architecture can easily be viewed from [this repository](https://github.com/Luwow-Project/Printer). You can clone it and update it however you wish to create your own library for Luwow.
+
 While this tutorial showed a simple example, modules can be created for all sorts of functionality. They can even be made and built for specific platforms, which we'll cover in other tutorials.
 
 
