@@ -58,6 +58,7 @@ namespace Luwow::Printer {
         ~PrinterModule() = default;
     
         const char* getModuleName() const override; // Gets the module name for requiring.
+        const char* getModuleAlias() const override; // Gets the module alias for requiring.
         const LuauExport* getExports() const override; // Exported functions under this module.
         ILuauModule* initialize(Engine* engine) override; // Initializes the module.
         
@@ -117,6 +118,11 @@ namespace Luwow::Printer {
     // The name that will be used to require the module.
     const char* PrinterModule::getModuleName() const {
         return "Printer";
+    }
+
+    // The alias that will be used to require the module.
+    const char* PrinterModule::getModuleAlias() const {
+        return "Luwow";
     }
 
     // The exported functions to Luau.
