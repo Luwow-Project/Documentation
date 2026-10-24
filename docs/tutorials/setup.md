@@ -67,11 +67,9 @@ If you wish to change the config, config/build types are:
 
 If the setup has completed successfully, under the build/bin/Release (Windows) or build/bin (Mac) folder, you should see these binaries:
 
-* `runscript`
-* `runpackage`
-* `runscriptwithgui`
-* `remotedebug`
 * `compile`
+* `runpackage`
+* `runscript`
 
 Do note that these binaries come with the release repository. If you wish, you can change, add or even remove binaries from your project. You can learn more about this in the later tutorial pages.
 
@@ -81,10 +79,6 @@ Do note that these binaries come with the release repository. If you wish, you c
 
 Each executable binary allows you to achieve certain functionality within the core Luwow engine. Let's go over them one by one:
 
-### `runscript <script.luau> <config.luau>`
-
-This executable allows you to directly compile and run a certain Luau script under the Luwow engine.
-
 ### `compile [-c <.config.luau>] [-s <script1.luau> <script2.luau> ...] [-o <output.pkg>]`
 
 This executable compiles one or more Luau scripts into bytecode and places them in a package in the order listed. A package is a special file which contains the bytecode of all of the Luau scripts that are placed within. It can be used to store and run the scripts later in a compact way.
@@ -93,10 +87,6 @@ This executable compiles one or more Luau scripts into bytecode and places them 
 
 This executable runs the first Luau script compiled within the given package under the Luwow engine. A Luau script under a package can require other scripts within the same package.
 
-### `remotedebug <port> <script.luau>`
+### `runscript <script.luau> <config.luau>`
 
-This executable is meant for debugging your Luau scripts under the Luwow engine. Upon running the executable, it will create a local server, which by using your IDE's debugger, can be connected to. After connecting, you should be able to see the details of your main Luau thread's stack.
-
-### `runscriptwithgui <script.luau>`
-
-This executable allows you to directly compile and run a certain Luau script under the Luwow engine, with support for the [GUI](https://github.com/Luwow-Project/GUI) library.
+This executable allows you to directly compile and run a certain Luau script under the Luwow engine.
