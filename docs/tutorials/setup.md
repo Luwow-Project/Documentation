@@ -1,92 +1,37 @@
-# Luwow Project Setup
+# Luwow Installation and Usage
 
-Like it has been mentioned in the previous page, Luwow gives total control to the user on how they wish to use its components. This is why you have to select which components you wish to use, and create a project yourself using those components. 
+## Installation
 
-If you don't know how to setup a Luwow project on your own however, there's already a [pre-made release repository](https://github.com/Luwow-Project/Release) that you can clone to your computer to get started. This tutorial page will go over the process of setting up this pre-made repository in detail.
+There are two ways of obtaining the binaries and the libraries for your platform to start using Luwow:
 
-## Requirements
+### Pre-built
 
-* C++ 17 compatible compiler
-* CMake 3.16 or later
-* Luau source code
+If you don't want to build Luwow manually yourself to create binaries, you can head over to the [latest release](https://github.com/Luwow-Project/Release/releases/latest) to download the pre-built binaries for your platform. After the download, head over to the [usage](#usage) section to learn how to use the binaries.
 
------
+### Manual
 
-## Supported Platforms
-
-* Windows (Microsoft Visual Studio Code + Visual C++ compiler)
-* Windows (Microsoft Visual Studio Code + MinGW C++ compiler)
-* MacOS (Microsoft Visual Studio Code + XCode compiler)
-
-*(Future OS plans include iPad, Linux, and Android)*
-
------
-
-## Setting Up
-
-In a folder, run the commands below in your terminal:
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/Luwow-Project/Release Luwow --recurse-submodules
-cd Luwow
-```
-
-If you forget the --recurse-submodules flag, you can follow up with:
-```bash
-git submodule update --init --recursive
-```
-
-### 2. Configure and Build the Project
-
-Windows:
-```bash
-cmake . -B build
-cmake --build build --config Release
-```
-
-If using MinGW on Windows:
-```bash
-cmake . -B build -G "MinGW Makefiles"
-cmake --build build --config Release
-```
-
-MacOS:
-```bash
-cmake -S . -B build -D CMAKE_BUILD_TYPE=Release
-cmake --build build
-```
-
-If you wish to change the config, config/build types are:
-`Debug`, `Release`, `RelWithDebugInfo`, `MinSizeRel`
-
------
-
-## After Setup
-
-If the setup has completed successfully, under the build/bin/Release (Windows) or build/bin (Mac) folder, you should see these binaries:
-
-* `compile`
-* `runpackage`
-* `runscript`
-
-Do note that these binaries come with the release repository. If you wish, you can change, add or even remove binaries from your project. You can learn more about this in the later tutorial pages.
-
------
+If you wish to have total control over how the binaries and their libraries are going to be built, you can check out the [building](building.md) page to get started.
 
 ## Usage
 
 Each executable binary allows you to achieve certain functionality within the core Luwow engine. Let's go over them one by one:
 
-### `compile [-c <.config.luau>] [-s <script1.luau> <script2.luau> ...] [-o <output.pkg>]`
+### `compile [-c <.config.luau>] [-s <main.luau> <script.luau | folder> ...] [-o <output.pkg>]`
 
 This executable compiles one or more Luau scripts into bytecode and places them in a package in the order listed. A package is a special file which contains the bytecode of all of the Luau scripts that are placed within. It can be used to store and run the scripts later in a compact way.
 
+#### Options
+
+* `-c <.config.luau>`: Provides a `.config.luau` configuration script to be compiled within the package. A `.config.luau` file allows you to configure how the Luwow will behave when it's being ran. More details about it can be found [here](require.md).
+* `-s <main.luau> <script.luau | folder> ...`: 
+    * `<main.luau>`: Provides a `.luau` file to be executed first when the package is ran. You can treat it as the entry point of your program within that package.
+    * `<script.luau | folder>`: Provides either a `.luau` file or a folder path of scripts to be compiled under the package. These scripts can be ran by the main script.
+* `-o <output.pkg>`: Declares how the package output will be made. Creates or overwrites a `.pkg` package file. 
+
 ### `runpackage <packagename.pkg>`
 
-This executable runs the first Luau script compiled within the given package under the Luwow engine. A Luau script under a package can require other scripts within the same package.
+Runs the given `packagename.pkg` under the Luwow engine. Uses the `.config.luau` file compiled within the package to configure how Luwow will run.
 
-### `runscript <script.luau> <config.luau>`
+### `runscript <script.luau> <.config.luau>`
 
-This executable allows you to directly compile and run a certain Luau script under the Luwow engine.
+This executable allows you to directly compile and run a certain Luau script under the Luwow engine. It accepts an optional `.config.luau` script path to configure how Luwow will run.
