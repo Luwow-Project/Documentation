@@ -22,10 +22,10 @@ This executable compiles one or more Luau scripts into bytecode and places them 
 
 #### Options
 
-* `-c <.config.luau>`: Provides a `.config.luau` configuration script to be compiled within the package. A `.config.luau` file allows you to configure how the Luwow will behave when it's being ran. More details about it can be found [here](require.md).
+* `-c <.config.luau>`: Provides a `.config.luau` configuration script to be compiled within the package. A `.config.luau` file allows you to configure how Luwow will behave when it's being ran. More details about it can be found [here](require.md).
 * `-s <main.luau> <script.luau | folder> ...`: 
     * `<main.luau>`: Provides a `.luau` file to be executed first when the package is ran. You can treat it as the entry point of your program within that package.
-    * `<script.luau | folder>`: Provides either a `.luau` file or a folder path of scripts to be compiled under the package. These scripts can be ran by the main script.
+    * `<script.luau | folder>`: Provides either a `.luau` file or a folder path of scripts to be compiled under the package. These scripts can be required by the main script.
 * `-o <output.pkg>`: Declares how the package output will be made. Creates or overwrites a `.pkg` package file. 
 
 ### `runpackage <packagename.pkg>`

@@ -1,7 +1,6 @@
 # Building a Luwow Project
 
-Luwow gives full control to the user on how it should be built. Libraries can either be bound to the executable, or be their own `.DLL` files. 
-Libraries can also be built under certain modes. In this page, we'll get into all of those details.
+Luwow gives full control to the user on how it should be built. Libraries can either be bound to the executable, or be their own dynamic link library files. In this page, we'll get into all of those details.
 
 If you wish to build a Luwow project completely on your own, you can pull in the [Core](https://github.com/Luwow-Project/Core). It houses the engine, and sources for the binaries. However, in this page, we will be using the [release repository](https://github.com/Luwow-Project/Release), as it already contains everything we need for a working Luwow application. Let's begin.
 
@@ -68,6 +67,7 @@ these commands. However, the Release repository comes with a variety of options 
 * `-D LUWOW_BUILD_EXECUTABLES`: `ON` by default, `ON` builds the executable binaries, `OFF` does not.
 * `-D LUWOW_BUILD_LIBRARIES`: `ON` by default, `ON` builds the libraries, `OFF` does not.
 * `-D LUWOW_LIBRARY_MODE`: `SHARED` by default, `SHARED` builds the libraries as dynamic link libraries that can be loaded to the executable binary, while `STATIC` builds the libraries and binds them to the executable binary.
+* `-D LUWOW_EXECUTABLE_TARGET`: `Luwow.RunScript` by default, the target name of the executable binary. This is used for dynamic link libraries to bind to the executable binary.
 
 Luwow also supports 4 build type options:
 
